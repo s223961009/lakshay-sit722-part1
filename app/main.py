@@ -3,9 +3,9 @@ from sqlalchemy.orm import Session
 from typing import List
 from typing import Optional
 
-from app.models import Book, Base  # Correcting the import path
-from app.schemas import BookBase, BookCreate, BookInDB, BookUpdate
-from app.db import engine, get_db
+from models import Book, Base  # Correcting the import path
+from schemas import BookBase, BookCreate, BookInDB, BookUpdate
+from db import engine, get_db
 
 # Create tables if they do not exist
 Base.metadata.create_all(bind=engine)
